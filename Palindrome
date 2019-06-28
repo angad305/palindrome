@@ -1,0 +1,37 @@
+public class Palindrome {
+
+	public static void main(String[] args) {
+		// Check whether a number is same when reversed
+
+		int number = 123454321;
+		String str = Integer.toString(number);
+		int len = str.length();
+
+		// First Half of the string
+		int i;
+		String first = "";
+		for (i = 0; i <= (len) / 2; i++) {
+			char firsthalf = str.charAt(i);
+			first += firsthalf;
+		}
+		System.out.println(first + " first half");
+
+		// Second Half of the string
+		String second = "";
+		int j;
+		for (j = len - 1; j >= (len) / 2; j--) {
+			char secondhalf = str.charAt(j);
+			second += secondhalf;
+
+		}
+		System.out.println(second + " second half");
+
+		// Check if first half is equal to second half
+		if (first.equals(second)) {
+			System.out.println("Number is a Palindrome");
+		} else {
+			System.out.println("Number not a Palindrome");
+		}
+	}
+
+}
