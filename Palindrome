@@ -8,9 +8,8 @@ public class Palindrome {
 		int len = str.length();
 
 		// First Half of the string
-		int i;
 		String first = "";
-		for (i = 0; i <= (len) / 2; i++) {
+		for (int i = 0; i <= (len) / 2; i++) {
 			char firsthalf = str.charAt(i);
 			first += firsthalf;
 		}
@@ -18,8 +17,7 @@ public class Palindrome {
 
 		// Second Half of the string
 		String second = "";
-		int j;
-		for (j = len - 1; j >= (len) / 2; j--) {
+		for (int j = len - 1; j >= (len) / 2; j--) {
 			char secondhalf = str.charAt(j);
 			second += secondhalf;
 
@@ -28,9 +26,9 @@ public class Palindrome {
 
 		// Check if first half is equal to second half
 		if (first.equals(second)) {
-			System.out.println("Number is a Palindrome");
+			System.out.println("Palindrome");
 		} else {
-			System.out.println("Number not a Palindrome");
+			System.out.println("not palin");
 		}
 	}
 
